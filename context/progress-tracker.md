@@ -12,7 +12,7 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Completed
 
-- Design system setup — Next.js 16 + shadcn/ui initialized with `base-nova` style, lucide-react installed, `lib/utils.ts` with `cn()` helper created, 7 UI primitive components added (Button, Card, Dialog, Input, Tabs, Textarea, ScrollArea), globals.css themed with ghost-ai dark-only palette.
+- Feature 01: Design system setup — Next.js 16 + shadcn/ui initialized with `base-nova` style, lucide-react installed, `lib/utils.ts` with `cn()` helper created, 7 UI primitive components added (Button, Card, Dialog, Input, Tabs, Textarea, ScrollArea), globals.css themed with ghost-ai dark-only palette.
 
 ## In Progress
 
