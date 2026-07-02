@@ -4,7 +4,7 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Feature 1: Design System & UI Primitives ✅
+- Feature 01: Design System & UI Primitives ✅
 
 ## Current Goal
 
@@ -20,7 +20,7 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Next Up
 
-- Define the next feature unit.
+- Define the next feature.
 
 ## Open Questions
 
