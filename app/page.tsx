@@ -1,23 +1,26 @@
 "use client"
 
-import { useState } from "react"
-import { EditorNavbar } from "@/components/editor/editor-navbar"
-import { ProjectSidebar } from "@/components/editor/project-sidebar"
+import { useAuth } from "@clerk/nextjs"
+import { useRouter } from "next/navigation"
+import { useEffect, useRef } from "react"
 
 export default function Home() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const { isLoaded, userId } = useAuth()
+  const router = useRouter()
+  const redirecting = useRef(false)
+
+  useEffect(() => {
+    if (!isLoaded || redirecting.current) return
+    redirecting.current = true
+    router.replace(userId ? "/editor" : "/sign-in")
+  }, [isLoaded, userId, router])
 
   return (
-    <div className="flex h-screen flex-col">
-      <EditorNavbar
-        sidebarOpen={sidebarOpen}
-        onToggleSidebar={() => setSidebarOpen((v) => !v)}
-      />
-      <ProjectSidebar
-        isOpen={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
-      />
-      <main className="flex-1 bg-base" />
+    <div className="flex min-h-screen items-center justify-center bg-base">
+      <div className="flex flex-col items-center gap-4">
+        <span className="text-xl font-bold tracking-widest text-primary">GHOST AI</span>
+        <div className="size-1.5 animate-pulse rounded-full bg-accent-primary" />
+      </div>
     </div>
   )
 }
