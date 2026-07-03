@@ -5,14 +5,16 @@ Update this file whenever the current phase, active feature, or implementation s
 ## Current Phase
 
 - Feature 01: Design System & UI Primitives ✅
+- Feature 02: Editor Shell ✅
 
 ## Current Goal
 
-- Design system is complete. Next feature unit to be defined.
+- Editor chrome components (navbar + sidebar) are built. Dialog pattern verified. Ready for editor canvas work.
 
 ## Completed
 
 - Feature 01: Design system setup — Next.js 16 + shadcn/ui initialized with `base-nova` style, lucide-react installed, `lib/utils.ts` with `cn()` helper created, 7 UI primitive components added (Button, Card, Dialog, Input, Tabs, Textarea, ScrollArea), globals.css themed with ghost-ai dark-only palette.
+- Feature 02: Editor chrome implemented — `components/editor/editor-navbar.tsx` (fixed top bar with sidebar toggle, PanelLeftOpen/PanelLeftClose icons, dark bg + bottom border), `components/editor/project-sidebar.tsx` (floating slide-in from left, Projects title + close button, shadcn Tabs with My Projects/Shared tabs and empty placeholders, full-width New Project button with Plus icon). Dialog pattern verified: existing `Dialog` component already supports title (`DialogTitle`), description (`DialogDescription`), footer actions (`DialogFooter`), and uses globals.css color tokens.
 
 ## In Progress
 
@@ -20,7 +22,7 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Next Up
 
-- Define the next feature.
+- Define the next feature (editor canvas or AI panel).
 
 ## Open Questions
 
